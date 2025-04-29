@@ -1,0 +1,66 @@
+body {
+    background-image: url('bggold.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+    color: rgb(15, 14, 14);
+}
+
+.Judul {
+    position: relative;
+    width: 100%;
+    height: 150px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.Judul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('jackpot.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+    box-shadow: 0 4px 8px rgb(254, 254, 254);
+}
+
+.Judul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 63, 63, 0.4);
+    z-index: -1;
+}
+
+.profil {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    color: rgb(50, 217, 48);
+}
