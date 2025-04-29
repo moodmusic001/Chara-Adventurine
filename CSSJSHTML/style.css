@@ -1,0 +1,191 @@
+body {
+    background-image: url('bggold.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh; 
+    margin: 0; 
+    font-family: Arial, sans-serif;
+    color: rgb(15, 14, 14);
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 16ch; }
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 3px #fff, 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00; }
+    50% { text-shadow: 0 0 5px #fff, 0 0 10px #ffcc00, 0 0 15px #ffcc00, 0 0 20px #ffcc00; }
+    100% { text-shadow: 0 0 8px #fff, 0 0 15px #ffcc00, 0 0 20px #ffcc00, 0 0 25px #ffcc00; }
+}
+
+#typewriter {
+    font-size: 3em;
+    margin: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid white;
+    width: 0;
+    animation: typing 2s steps(20) forwards, glowing 1.5s ease-in-out infinite alternate;
+}
+
+#adventurine-blink {
+    font-size: 1.5em;
+    margin-top: 10px;
+    opacity: 0;
+    animation: blink 10s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+
+.image-container {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  overflow: hidden
+}
+
+.image-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.adventurine-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .adventurine-img:hover {
+    transform: scale(1.05);
+  }
+  
+  button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    z-index: 10;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+   
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.Judul {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.Judul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('jackpot.jpg') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: -1;
+    box-shadow: 0 4px 8px rgb(254, 254, 254);
+}
+
+.Judul::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(66, 63, 63, 0.4);
+    z-index: -1;
+}
+
+.profil {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 10%;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.highlight {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 10px;
+    color: rgb(50, 217, 48);
+}
